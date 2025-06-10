@@ -7,7 +7,4 @@ from sqlalchemy.ext.declarative import declarative_base
 SQLALCHEMY_DATABASE_URL = 'mysql+pymysql://root:admin@localhost:3315/sn-52-3147234'
 
 #crea el objeto de conexion(permite conectarse a la base de datos)
-conn = create_engine(SQLALCHEMY_DATABASE_URL)
-
-#la clase base para los modelos de la base de datos
-Base = declarative_base()
+engine = create_engine(SQLALCHEMY_DATABASE_URL)

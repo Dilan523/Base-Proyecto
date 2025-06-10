@@ -8,8 +8,8 @@ import os
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
 
 # Importa el Base y tus modelos
-from db.database import Base
-from db.models import Categoria, Rol, Noticia, Usuario, Imagen, Comentario
+from db import Base, SQLALCHEMY_DATABASE_URL
+from models import Categoria, Noticia, Imagen, Comentario, Usuario, Rol
 
 # Configuración de Alembic
 config = context.config
