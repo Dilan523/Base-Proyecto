@@ -10,6 +10,8 @@ class Usuario(Base):
     apellido_usuario = Column(String(60))
     correo_usuario = Column(String(60))
     contrasena_usuario = Column(String(60))
+    estado_editor = Column(Boolean)
+    estado_escritor = Column(Boolean)
 
     comentarios = relationship("Comentario", back_populates="usuario")
     #clave foranea
