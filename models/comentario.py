@@ -7,8 +7,7 @@ class Comentario(Base):
     id_comentario = Column(Integer, primary_key=True)
     fecha_creacion = Column(Date)
     contenido = Column(String(200))
-    
-    usuario = relationship("Usuario", back_populates="comentarios")
+
     # Clave foránea
     noticia_id = Column(Integer,
                         ForeignKey("noticias.id_noticia"))
@@ -16,4 +15,3 @@ class Comentario(Base):
     usuario_id = Column(Integer,
                         ForeignKey("usuarios.id_usuario"))
     
-    noticia = relationship("Noticia", back_populates="comentarios")

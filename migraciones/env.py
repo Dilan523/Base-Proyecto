@@ -22,7 +22,7 @@ if config.config_file_name is not None:
 target_metadata = Base.metadata
 
 # URL de conexión (directa desde tu proyecto)
-SQLALCHEMY_DATABASE_URL = "mysql+pymysql://root:admin@localhost:3315/sn-52-3147234"
+SQLALCHEMY_DATABASE_URL = "mysql+pymysql://root:admin@localhost:3325/sn-52-3147234"
 
 def run_migrations_offline() -> None:
     """Ejecuta migraciones en modo offline."""
