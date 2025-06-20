@@ -4,7 +4,7 @@ from sqlalchemy.orm import relationship
 
 class Categoria(Base):
     __tablename__ = "categorias"
-    id = Column(Integer,
+    id_categoria = Column(Integer,
                 primary_key=True)
     fecha_creacion = Column(Date)
     estado = Column(Boolean)

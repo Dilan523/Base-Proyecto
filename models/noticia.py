@@ -4,7 +4,7 @@ from sqlalchemy.orm import relationship
 
 class Noticia(Base):
     __tablename__ = "noticias"
-    id = Column(Integer,
+    id_noticia = Column(Integer,
                 primary_key=True)
     fecha_creacion = Column(Date)
     estado = Column(Boolean)
@@ -15,10 +15,10 @@ class Noticia(Base):
     estado = Column(Integer)
 
     
-    categoria_id = Column(Integer, ForeignKey("categorias.id"))
-    comentario_id = Column(Integer, ForeignKey("comentarios.id"))
-    usuario_revisor_id = Column(Integer, ForeignKey("usuarios.id"))
-    usuario_escritor_id = Column(Integer, ForeignKey("usuarios.id"))
+    categoria_id = Column(Integer, ForeignKey("categorias.id_categoria"))
+    comentario_id = Column(Integer, ForeignKey("comentarios.id_comentario"))
+    usuario_revisor_id = Column(Integer, ForeignKey("usuarios.id_usuario"))
+    usuario_escritor_id = Column(Integer, ForeignKey("usuarios.id_usuario"))
 
     
     imagenes = relationship("Imagen", back_populates="noticia") #plural y coincide
