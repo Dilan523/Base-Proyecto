@@ -10,4 +10,4 @@ class Rol(Base):
     nombre = Column(String(60))
 
     # Relación inversa: un rol tiene muchos usuarios
-    usuarios = relationship("Usuario", back_populates="rol")
+    # usuarios = relationship("Usuario", back_populates="rol")

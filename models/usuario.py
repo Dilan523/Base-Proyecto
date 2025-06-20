@@ -13,9 +13,9 @@ class Usuario(Base):
     estado_editor = Column(Boolean)
     estado_escritor = Column(Boolean)
 
-    comentarios = relationship("Comentario", back_populates="usuario")
+    # comentarios = relationship("Comentario", back_populates="usuario")
     #clave foranea
     rol_id = Column(Integer, 
                     ForeignKey("roles.id_rol"))
     # Relación con SQLAlchemy para acceso sencillo
-    rol = relationship("Rol", back_populates="usuarios")
+    # rol = relationship("Rol", back_populates="usuarios")

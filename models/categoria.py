@@ -11,4 +11,4 @@ class Categoria(Base):
     nombre = Column(String(60))
     
     # #relacion uno a muchos
-    noticias = relationship("Noticia", back_populates="categoria")
+    # noticias = relationship("Noticia", back_populates="categoria")
