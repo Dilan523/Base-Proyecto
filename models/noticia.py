@@ -16,11 +16,10 @@ class Noticia(Base):
 
     
     categoria_id = Column(Integer, ForeignKey("categorias.id_categoria"))
-    # comentario_id = Column(Integer, ForeignKey("comentarios.id_comentario"))
     usuario_revisor_id = Column(Integer, ForeignKey("usuarios.id_usuario"))
     usuario_escritor_id = Column(Integer, ForeignKey("usuarios.id_usuario"))
 
     
-    # imagenes = relationship("Imagen", back_populates="noticia") #plural y coincide
-    # comentarios = relationship("Comentario", back_populates="noticia")
-    # categoria = relationship("Categoria", back_populates="noticias")
+    imagenes = relationship("Imagen", back_populates="noticia") #plural y coincide
+    comentarios = relationship("Comentario", back_populates="noticia")
+    categoria = relationship("Categoria", back_populates="noticias")

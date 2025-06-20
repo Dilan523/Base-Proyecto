@@ -10,4 +10,4 @@ class Imagen(Base):
     tipo_archivo = Column(String(10))
     
     noticia_id = Column(Integer, ForeignKey("noticias.id_noticia"))  # clave foránea
-    # noticia = relationship("Noticia", back_populates="imagenes")
+    noticia = relationship("Noticia", back_populates="imagenes")
