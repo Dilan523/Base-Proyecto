@@ -4,7 +4,7 @@ from sqlalchemy.orm import relationship
 
 class Usuario(Base):
     __tablename__ = "usuarios"
-    id_usuario = Column(Integer,
+    id = Column(Integer,
                         primary_key=True)
     nombre_usuario = Column(String(60))
     apellido_usuario = Column(String(60))
@@ -16,6 +16,6 @@ class Usuario(Base):
     #comentarios = relationship("Comentario", back_populates="usuario")
     #clave foranea
     rol_id = Column(Integer, 
-                    ForeignKey("roles.id_rol"))
+                    ForeignKey("roles.id"))
     # Relación con SQLAlchemy para acceso sencillo
     #rol = relationship("Rol", back_populates="usuarios")
